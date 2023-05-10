@@ -1,12 +1,17 @@
-# h1 Heading
+---
+cssClass: toggle-left-aligned-content
+---
+# *h1 Heading*
+## **h2 Heading**
 ## h2 Heading
+## **_h2 Heading_**
 ### h3 Heading
 #### h4 Heading
 ##### h5 Heading
 ###### h6 Heading
 
 
-# h1 Heading 2
+# h1 Wow
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur malesuada dolor et feugiat. Maecenas at risus ut ipsum rutrum maximus a id arcu. Curabitur tortor nulla, ultricies mattis neque ut, elementum interdum nisl. Nam dapibus tempus ornare. Fusce fringilla lectus sit amet orci rhoncus mollis. ^038507
 

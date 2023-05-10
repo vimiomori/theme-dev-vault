@@ -62,11 +62,17 @@ var themeDesignUtilities = class extends import_obsidian.Plugin {
         id: "freeze-obsidian",
         name: "Freeze Obsidian (with " + freezeDelaySecs.toString() + "s delay)",
         callback: () => {
-          new import_obsidian.Notice("Will freeze Obsidian in " + freezeDelaySecs.toString() + "s (if the console is open.)", (freezeDelaySecs - 1) * 1e3);
+          new import_obsidian.Notice("Will freeze Obsidian in " + freezeDelaySecs.toString() + "s", (freezeDelaySecs - 1) * 1e3);
+          electronWindow.openDevTools();
           setTimeout(() => {
             debugger;
           }, freezeDelaySecs * 1e3);
         }
+      });
+      this.addCommand({
+        id: "toggle-devtools",
+        name: "Toggle Devtools",
+        callback: () => electronWindow.toggleDevTools()
       });
       this.addCommand({
         id: "test-notice",
@@ -84,14 +90,39 @@ var themeDesignUtilities = class extends import_obsidian.Plugin {
         callback: () => window.open("https://raw.githubusercontent.com/chrisgrieser/obsidian-theme-design-utilities/master/cheatsheets/css-classes.png")
       });
       this.addCommand({
+        id: "color-playground",
+        name: "Open GitHub Folder with Color Playground files to download",
+        callback: () => window.open("https://github.com/chrisgrieser/obsidian-theme-design-utilities/tree/main/color-playground")
+      });
+      this.addCommand({
         id: "toggle-dark-light-mode",
         name: "Toggle between Dark and Light Mode",
-        callback: () => this.toggleTheme()
+        callback: () => this.toggleDarkMode()
       });
       this.addCommand({
         id: "cycle-views",
         name: "Cycle between Source Mode, Live Preview, and Reading Mode",
         callback: () => this.cycleViews()
+      });
+      this.addCommand({
+        id: "cycle-themes",
+        name: "Cycle between the installed themes",
+        callback: () => this.cycleThemes()
+      });
+      this.addCommand({
+        id: "debugging-outline",
+        name: "Toggle Red Outlines for Debugging",
+        callback: () => this.toggleDebuggingCSS()
+      });
+      this.addCommand({
+        id: "toggle-garbled-text",
+        name: "Toggle Garbled Text",
+        callback: () => this.toggleGarbleText()
+      });
+      this.addCommand({
+        id: "test-body-class",
+        name: 'Toggle class ".foobar" for .app-container',
+        callback: () => this.toggleTestClass()
       });
       this.addCommand({
         id: "version-info",
@@ -110,9 +141,24 @@ Electron Version: ${electronVersion}`, versionInfoNoticeDuration * 1e3);
   onunload() {
     return __async(this, null, function* () {
       console.log("Theme Design Utilities Plugin unloaded.");
+      this.app.dom.appContainerEl.removeClass("foobar");
     });
   }
-  toggleTheme() {
+  cycleThemes() {
+    const currentTheme = this.app.customCss.theme;
+    const installedThemes = [...Object.keys(this.app.customCss.themes), ...this.app.customCss.oldThemes];
+    if (installedThemes.length === 0) {
+      new import_obsidian.Notice("Cannot cycle themes since no community theme is installed.");
+      return;
+    }
+    installedThemes.push("");
+    let indexOfNextTheme = installedThemes.indexOf(currentTheme) + 1;
+    if (indexOfNextTheme === installedThemes.length)
+      indexOfNextTheme = 0;
+    const nextTheme = installedThemes[indexOfNextTheme];
+    this.app.customCss.setTheme(nextTheme);
+  }
+  toggleDarkMode() {
     const isDarkMode = this.app.vault.getConfig("theme") === "obsidian";
     if (isDarkMode) {
       this.app.setTheme("moonstone");
@@ -126,12 +172,13 @@ Electron Version: ${electronVersion}`, versionInfoNoticeDuration * 1e3);
   }
   cycleViews() {
     const noticeDuration = 2e3;
-    const activePane = this.app.workspace.activeLeaf;
-    const currentView = activePane.getViewState();
-    if (currentView.type === "empty") {
-      new import_obsidian.Notice("There is currently no file open.");
+    const isMarkdownView = this.app.workspace.getActiveViewOfType(import_obsidian.MarkdownView);
+    if (!isMarkdownView) {
+      new import_obsidian.Notice("Not a regular note or no file open.");
       return;
     }
+    const activePane = this.app.workspace.activeLeaf;
+    const currentView = activePane.getViewState();
     let currentMode;
     if (currentView.state.mode === "preview")
       currentMode = "preview";
@@ -157,5 +204,40 @@ Electron Version: ${electronVersion}`, versionInfoNoticeDuration * 1e3);
         break;
     }
     activePane.setViewState(newMode);
+  }
+  toggleDebuggingCSS() {
+    var _a;
+    const currentCSS = (_a = this.styleEl) == null ? void 0 : _a.textContent;
+    let cssToApply = "";
+    if (!currentCSS) {
+      cssToApply = "* {outline: red 1px solid !important}";
+      this.styleEl = document.createElement("style");
+      this.styleEl.setAttribute("type", "text/css");
+      document.head.appendChild(this.styleEl);
+      this.register(() => this.styleEl.detach());
+    }
+    this.styleEl.textContent = cssToApply;
+    this.app.workspace.trigger("css-change");
+  }
+  toggleGarbleText() {
+    var _a;
+    const currentCSS = (_a = this.styleEl) == null ? void 0 : _a.textContent;
+    let cssToApply = "";
+    if (!currentCSS) {
+      cssToApply = "body *:not(:hover) { font-family: Flow Circular !important; }";
+      this.styleEl = document.createElement("style");
+      this.styleEl.setAttribute("type", "text/css");
+      document.head.appendChild(this.styleEl);
+      this.register(() => this.styleEl.detach());
+    }
+    this.styleEl.textContent = cssToApply;
+    this.app.workspace.trigger("css-change");
+  }
+  toggleTestClass() {
+    const foobarActive = this.app.dom.appContainerEl.classList.value.includes("foobar");
+    if (foobarActive)
+      this.app.dom.appContainerEl.removeClass("foobar");
+    else
+      this.app.dom.appContainerEl.addClass("foobar");
   }
 };

@@ -1,10 +1,17 @@
+---
+cssclass: wide-table wide-dataview
+---
+
 # Styling tables
 
 You may want to add color for the header row. Styling alternate rows is also a frequently requested feature.
 
+```dataview
+table
+```
+
 | Letter | Subject area                                                                                                                                                                                                                                        |
 | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|  |
 | A      | [General Works](https://en.wikipedia.org/wiki/Library_of_Congress_Classification#Class_A_%E2%80%93_General_Works "Library of Congress Classification")                                                                                              |
 | B      | [Philosophy. Psychology. Religion](https://en.wikipedia.org/wiki/Library_of_Congress_Classification#Class_B_%E2%80%93_Philosophy,_Psychology,_Religion "Library of Congress Classification")                                                        |
 | C      | [Auxiliary Sciences of History](https://en.wikipedia.org/wiki/Library_of_Congress_Classification#Class_C_%E2%80%93_Auxiliary_Sciences_of_History_(General) "Library of Congress Classification")                                                    |

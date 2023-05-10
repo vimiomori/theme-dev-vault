@@ -1,1 +1,20 @@
-{}
+{
+  "app:reload": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "R"
+    }
+  ],
+  "editor:toggle-source": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "L"
+    }
+  ],
+  "obsidian-theme-design-utilities:cycle-views": [],
+  "editor:toggle-checklist-status": []
+}

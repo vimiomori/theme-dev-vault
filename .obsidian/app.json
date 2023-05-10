@@ -4,5 +4,9 @@
   "alwaysUpdateLinks": true,
   "showUnsupportedFiles": true,
   "legacyEditor": false,
-  "showFrontmatter": true
+  "showFrontmatter": true,
+  "showLineNumber": true,
+  "showIndentGuide": true,
+  "vimMode": true,
+  "livePreview": false
 }

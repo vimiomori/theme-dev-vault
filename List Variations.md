@@ -1,14 +1,37 @@
+---
+tags: meta
+cssClass: kanban wide-page
+---
+
 # List Variations
 
-## Unordered lists
-
-+ Create a list by starting a line with `+`, `-`, or `*`
-+ Sub-lists are made by indenting 2 spaces:
++ dataview
+	```dataview
+	list
+	```
++ normal list
   - Marker character change forces new list start:
-    * Ac tristique libero volutpat at
-    + Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
-+ Very easy!
+	- test
+	- test
+	- test
+	- test
+	- test
+	- test
+	- test
++ Tasks
+	- [ ] one
+		- [ ] nested
+	- [ ] two
+	- [ ] three
++ ordered
+	1. test
+	2. test
+		1. test
+			1. test
+			2. test
+	3. another
+	4. last
+
 
 With longer text that wraps: 
 
@@ -42,6 +65,12 @@ Nested numbered lists
 	1. adipiscing elit, 
 		1. sed do eiusmod tempor incididunt 
 			1. ut labore et dolore magna aliqua. 
+				1. test
+					1. test
+						1. test
+							1. test
+								1. test
+									1. test
 		2. Ut enim ad minim veniam, quis nostrud 
 	2. exercitation ullamco laboris nisi ut 
 2. aliquip ex ea commodo consequat
@@ -61,6 +90,14 @@ There are lots of variations for these. We will try to list some common ones her
 
 - **The basics**
 	- [ ] incomplete
+		- [ ] test
+			- [ ] test
+				- [ ] test
+					- [ ] test
+						- [ ] test
+							- [ ] test
+								- [ ] test
+									- [ ] 
 	- [x] `x` complete / done
 	- [X] `X` complete / done (Failed in Sanctum)
 - **Completion / GTD / bullet journal flavors**
@@ -69,6 +106,20 @@ There are lots of variations for these. We will try to list some common ones her
 	- [/] `/` for in progress, or half-done
 	- [!] `!` for Important
 	- [?] `?` for question
+
+- [ ] test
+- [ ] test
+- [ ] test
+- [ ] test
+- [ ] test
+- [ ] test
+- [ ] test
+
+- test
+	- test
+		- test
+			- [ ] test
+			- [ ] 
 
 ### Examples
 
@@ -100,7 +151,7 @@ Not all themes support all of these variations. Here are a few examples. These a
 - [b] `b` bookmark 
 - [B] `B` brainstorm
 - [D] `D` deferred or scheduled
-- [I] `I` for Info
+- [ ] `I` for Info
 - [i] `i` for idea
 - [N] `N` for note
 - [Q] `Q` for quote
@@ -134,7 +185,7 @@ Sanctum has some adjusted meanings (note differences to ITS)
 - [>] `>` for deferred / rescheduled
 - **Success and failure**
 	- [1] `1` for Success
-	- [W] `W` for Win / Success / Reward
+	- [x] `W` for Win / Success / Reward
 	- [X] `X` for failure 
 - **Money**
 	- [s] `s` for savings

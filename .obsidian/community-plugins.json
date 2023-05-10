@@ -3,5 +3,20 @@
   "obsidian-style-settings",
   "obsidian-kanban",
   "mysnippets-plugin",
-  "theme-picker"
+  "theme-picker",
+  "obsidian-contextual-typography",
+  "obsidian-vimrc-support",
+  "obsidian-relative-line-numbers",
+  "dataview",
+  "obsidian-admonition",
+  "obsidian-checklist-plugin",
+  "obsidian-tasks-plugin",
+  "better-fn",
+  "obsidian-emoji-toolbar",
+  "calendar",
+  "emoji-shortcodes",
+  "templater-obsidian",
+  "buttons",
+  "obsidian-dialogue-plugin",
+  "obsidian-memos"
 ]
