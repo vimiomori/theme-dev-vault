@@ -376,7 +376,7 @@ settings:
   - 
     id: builtin-style-info
     title: About Built-in Styles
-    description: Some styles can be enabled by specifying certain CSS class names at the `cssClass` field in the frontmatter. Multiple CSS classes can be combined. (eg. `cssClass： kanban wide-page`)
+    description: Some styles can be enabled by specifying certain CSS class names at the `cssClass` field in the frontmatter. Multiple CSS classes can be combined. (eg. `cssClass： kanban wide-page`). **Requires the Contextual Typography Plugin to work.**
     type: info-text
     markdown: true
   -
