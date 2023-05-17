@@ -615,11 +615,11 @@ settings:
   --rich-black-1: #002638;
   --rich-black-2: #002a3e;
   /* blues */
-  --prussian-blue: #002b3fff;
+  --prussian-blue: #00283f;
   --prussian-blue-1: #002d42;
   /* --prussian-blue-1: #002d42bd; */
   --prussian-blue-2: #00354B;
-  --prussian-blue-3: #003950ff;
+  --prussian-blue-3: #003955;
   --indigo-blue: #01435eff;
   --indigo-blue-2: #003f58;
   --midnight-green: #004f6b;
@@ -744,6 +744,7 @@ body {
   --font-size-loading-diy-text: 3em;
   --font-size-loading-add: 1.5em;
   --table-header-size: inherit;
+  --nav-item-parent-padding: 2px 5px 2px 23px;
 
   /*radius*/
   --radius-xs: 3px;
@@ -949,13 +950,13 @@ body {
 }
 
 body.theme-dark {
-  --color-base-00: #001722;
-  --color-base-10: #002a3e;
-  --color-base-20: #002b3fff;
-  --color-base-25: #002d42;
-  --color-base-30: #00354B;
-  --color-base-35: #003950ff;
-  --color-base-40: #004f6b;
+  --color-base-00: #001422;
+  --color-base-10: #00273e;
+  --color-base-20: #00283f;
+  --color-base-25: #002a42;
+  --color-base-30: #002f4b;
+  --color-base-35: #003955;
+  --color-base-40: #00496b;
   --color-base-50: #016986ff;
   --color-base-60: #018eb1;
   --color-base-70: #2CC6DB;
@@ -1333,6 +1334,7 @@ body.theme-dark {
   --cursor-blue: #8ac7ff;
   --cursor-violet: #bf76ff;
 
+  /* TODO: fix these */
   --bg-color-settings-0: #07070747;
   --bg-color-settings-0-1: #ffffff00;
   --bg-color-settings-1: #7c7c7c6d;

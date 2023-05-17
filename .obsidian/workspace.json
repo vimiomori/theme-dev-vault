@@ -65,6 +65,14 @@
                 "sortOrder": "alphabetical"
               }
             }
+          },
+          {
+            "id": "63e9a966ec1e8c01",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
@@ -153,7 +161,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 311
+    "width": 311,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
