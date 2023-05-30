@@ -5927,7 +5927,8 @@ body .markdown-source-view.mod-cm6 img:not([class*="emoji"]) {
 
 body .nav-folder *,
 body .nav-file * {
-  transition: all .15s;
+  /* Breaks in Obsidian v1.3.4 */
+  /* transition: all .15s; */
 }
 
 body.hide-vault-name .nav-folder.mod-root>.nav-folder-title {

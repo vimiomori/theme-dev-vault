@@ -26,9 +26,19 @@
                 "source": true
               }
             }
+          },
+          {
+            "id": "ba02b619c90945ee",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.3.4"
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -175,7 +185,7 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "8b29c59625ccb360",
+  "active": "ba02b619c90945ee",
   "lastOpenFiles": [
     "List Variations.md",
     "block quotes and stickies.md",
