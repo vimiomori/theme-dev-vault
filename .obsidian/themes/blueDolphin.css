@@ -4458,6 +4458,33 @@ body ul ul ul ol ul {
   list-style: circle;
 }
 
+@counter-style decimal-lv2 {
+  system: extends decimal;
+  suffix: ") ";
+}
+@counter-style lower-latin-lv2 {
+  system: extends lower-latin;
+  suffix: ") ";
+}
+@counter-style lower-roman-lv2 {
+  system: extends lower-roman;
+  suffix: ") ";
+}
+@counter-style decimal-lv3 {
+  system: extends decimal;
+  prefix: "(";
+  suffix: ") ";
+}
+@counter-style lower-latin-lv3 {
+  system: extends lower-latin;
+  prefix: "(";
+  suffix: ") ";
+}
+@counter-style lower-roman-lv3 {
+  system: extends lower-roman;
+  prefix: "(";
+  suffix: ") ";
+}
 
 body ol {
   list-style: var(--list-ol-marker-1);
@@ -4481,27 +4508,8 @@ body ol ul ul ol,
 body ul ol ul ol,
 body ul ul ol ol,
 body ul ul ul ol {
-  list-style: var(--list-ol-marker-4);
-}
-
-body ul ol ol ol ol,
-body ul ol ol ul ol,
-body ul ol ul ol ol,
-body ul ul ol ol ol,
-body ul ol ul ul ol,
-body ul ul ol ul ol,
-body ul ul ul ol ol,
-body ul ul ul ul ol,
-body ol ol ol ol ol,
-body ol ol ol ul ol,
-body ol ol ul ol ol,
-body ol ul ol ol ol,
-body ol ol ul ul ol,
-body ol ul ol ul ol,
-body ol ul ul ol ol,
-body ol ul ul ul ol
-{
-  list-style: var(--list-ol-marker-1);
+  /* list-style: var(--list-ol-marker-4); */
+  list-style-type: decimal-lv2;
 }
 
 body ol ol ol ol ol,
@@ -4521,8 +4529,10 @@ body ul ul ol ul ol,
 body ul ul ul ol ol,
 body ul ul ul ul ol
 {
-  list-style: var(--list-ol-marker-2);
+  /* list-style: var(--list-ol-marker-1); */
+  list-style-type: lower-latin-lv2;
 }
+
 body ol ol ol ol ol ol,
 body ol ol ol ol ul ol,
 body ol ol ol ul ol ol,
@@ -4556,30 +4566,206 @@ body ul ul ul ol ul ol,
 body ul ul ul ul ol ol,
 body ul ul ul ul ul ol
 {
-  list-style: var(--list-ol-marker-3);
+  list-style-type: lower-roman-lv2;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+body ol ol ol ol ol ol ol,
+body ol ol ol ol ol ul ol,
+body ol ol ol ol ul ol ol,
+body ol ol ol ul ol ol ol,
+body ol ol ol ol ul ul ol,
+body ol ol ol ul ol ul ol,
+body ol ol ol ul ul ol ol,
+body ol ol ol ul ul ul ol,
+body ol ol ul ol ol ol ol,
+body ol ol ul ol ol ul ol,
+body ol ol ul ol ul ol ol,
+body ol ol ul ul ol ol ol,
+body ol ol ul ol ul ul ol,
+body ol ol ul ul ol ul ol,
+body ol ol ul ul ul ol ol,
+body ol ol ul ul ul ul ol,
+body ol ul ol ol ol ol ol,
+body ol ul ol ol ol ul ol,
+body ol ul ol ol ul ol ol,
+body ol ul ol ul ol ol ol,
+body ol ul ol ol ul ul ol,
+body ol ul ol ul ol ul ol,
+body ol ul ol ul ul ol ol,
+body ol ul ol ul ul ul ol,
+body ol ul ul ol ol ol ol,
+body ol ul ul ol ol ul ol,
+body ol ul ul ol ul ol ol,
+body ol ul ul ul ol ol ol,
+body ol ul ul ol ul ul ol,
+body ol ul ul ul ol ul ol,
+body ol ul ul ul ul ol ol,
+body ol ul ul ul ul ul ol,
+body ul ol ol ol ol ol ol,
+body ul ol ol ol ol ul ol,
+body ul ol ol ol ul ol ol,
+body ul ol ol ul ol ol ol,
+body ul ol ol ol ul ul ol,
+body ul ol ol ul ol ul ol,
+body ul ol ol ul ul ol ol,
+body ul ol ol ul ul ul ol,
+body ul ol ul ol ol ol ol,
+body ul ol ul ol ol ul ol,
+body ul ol ul ol ul ol ol,
+body ul ol ul ul ol ol ol,
+body ul ol ul ol ul ul ol,
+body ul ol ul ul ol ul ol,
+body ul ol ul ul ul ol ol,
+body ul ol ul ul ul ul ol,
+body ul ul ol ol ol ol ol,
+body ul ul ol ol ol ul ol,
+body ul ul ol ol ul ol ol,
+body ul ul ol ul ol ol ol,
+body ul ul ol ol ul ul ol,
+body ul ul ol ul ol ul ol,
+body ul ul ol ul ul ol ol,
+body ul ul ol ul ul ul ol,
+body ul ul ul ol ol ol ol,
+body ul ul ul ol ol ul ol,
+body ul ul ul ol ul ol ol,
+body ul ul ul ul ol ol ol,
+body ul ul ul ol ul ul ol,
+body ul ul ul ul ol ul ol,
+body ul ul ul ul ul ol ol,
+body ul ul ul ul ul ul ol
+{
+  list-style-type: decimal-lv3;
+}
+body ol ol ol ol ol ol ol ol,
+body ol ol ol ol ol ol ul ol,
+body ol ol ol ol ol ul ol ol,
+body ol ol ol ol ul ol ol ol,
+body ol ol ol ol ol ul ul ol,
+body ol ol ol ol ul ol ul ol,
+body ol ol ol ol ul ul ol ol,
+body ol ol ol ol ul ul ul ol,
+body ol ol ol ul ol ol ol ol,
+body ol ol ol ul ol ol ul ol,
+body ol ol ol ul ol ul ol ol,
+body ol ol ol ul ul ol ol ol,
+body ol ol ol ul ol ul ul ol,
+body ol ol ol ul ul ol ul ol,
+body ol ol ol ul ul ul ol ol,
+body ol ol ol ul ul ul ul ol,
+body ol ol ul ol ol ol ol ol,
+body ol ol ul ol ol ol ul ol,
+body ol ol ul ol ol ul ol ol,
+body ol ol ul ol ul ol ol ol,
+body ol ol ul ol ol ul ul ol,
+body ol ol ul ol ul ol ul ol,
+body ol ol ul ol ul ul ol ol,
+body ol ol ul ol ul ul ul ol,
+body ol ol ul ul ol ol ol ol,
+body ol ol ul ul ol ol ul ol,
+body ol ol ul ul ol ul ol ol,
+body ol ol ul ul ul ol ol ol,
+body ol ol ul ul ol ul ul ol,
+body ol ol ul ul ul ol ul ol,
+body ol ol ul ul ul ul ol ol,
+body ol ol ul ul ul ul ul ol,
+body ol ul ol ol ol ol ol ol,
+body ol ul ol ol ol ol ul ol,
+body ol ul ol ol ol ul ol ol,
+body ol ul ol ol ul ol ol ol,
+body ol ul ol ol ol ul ul ol,
+body ol ul ol ol ul ol ul ol,
+body ol ul ol ol ul ul ol ol,
+body ol ul ol ol ul ul ul ol,
+body ol ul ol ul ol ol ol ol,
+body ol ul ol ul ol ol ul ol,
+body ol ul ol ul ol ul ol ol,
+body ol ul ol ul ul ol ol ol,
+body ol ul ol ul ol ul ul ol,
+body ol ul ol ul ul ol ul ol,
+body ol ul ol ul ul ul ol ol,
+body ol ul ol ul ul ul ul ol,
+body ol ul ul ol ol ol ol ol,
+body ol ul ul ol ol ol ul ol,
+body ol ul ul ol ol ul ol ol,
+body ol ul ul ol ul ol ol ol,
+body ol ul ul ol ol ul ul ol,
+body ol ul ul ol ul ol ul ol,
+body ol ul ul ol ul ul ol ol,
+body ol ul ul ol ul ul ul ol,
+body ol ul ul ul ol ol ol ol,
+body ol ul ul ul ol ol ul ol,
+body ol ul ul ul ol ul ol ol,
+body ol ul ul ul ul ol ol ol,
+body ol ul ul ul ol ul ul ol,
+body ol ul ul ul ul ol ul ol,
+body ol ul ul ul ul ul ol ol,
+body ol ul ul ul ul ul ul ol,
+body ul ol ol ol ol ol ol ol,
+body ul ol ol ol ol ol ul ol,
+body ul ol ol ol ol ul ol ol,
+body ul ol ol ol ul ol ol ol,
+body ul ol ol ol ol ul ul ol,
+body ul ol ol ol ul ol ul ol,
+body ul ol ol ol ul ul ol ol,
+body ul ol ol ol ul ul ul ol,
+body ul ol ol ul ol ol ol ol,
+body ul ol ol ul ol ol ul ol,
+body ul ol ol ul ol ul ol ol,
+body ul ol ol ul ul ol ol ol,
+body ul ol ol ul ol ul ul ol,
+body ul ol ol ul ul ol ul ol,
+body ul ol ol ul ul ul ol ol,
+body ul ol ol ul ul ul ul ol,
+body ul ol ul ol ol ol ol ol,
+body ul ol ul ol ol ol ul ol,
+body ul ol ul ol ol ul ol ol,
+body ul ol ul ol ul ol ol ol,
+body ul ol ul ol ol ul ul ol,
+body ul ol ul ol ul ol ul ol,
+body ul ol ul ol ul ul ol ol,
+body ul ol ul ol ul ul ul ol,
+body ul ol ul ul ol ol ol ol,
+body ul ol ul ul ol ol ul ol,
+body ul ol ul ul ol ul ol ol,
+body ul ol ul ul ul ol ol ol,
+body ul ol ul ul ol ul ul ol,
+body ul ol ul ul ul ol ul ol,
+body ul ol ul ul ul ul ol ol,
+body ul ol ul ul ul ul ul ol,
+body ul ul ol ol ol ol ol ol,
+body ul ul ol ol ol ol ul ol,
+body ul ul ol ol ol ul ol ol,
+body ul ul ol ol ul ol ol ol,
+body ul ul ol ol ol ul ul ol,
+body ul ul ol ol ul ol ul ol,
+body ul ul ol ol ul ul ol ol,
+body ul ul ol ol ul ul ul ol,
+body ul ul ol ul ol ol ol ol,
+body ul ul ol ul ol ol ul ol,
+body ul ul ol ul ol ul ol ol,
+body ul ul ol ul ul ol ol ol,
+body ul ul ol ul ol ul ul ol,
+body ul ul ol ul ul ol ul ol,
+body ul ul ol ul ul ul ol ol,
+body ul ul ol ul ul ul ul ol,
+body ul ul ul ol ol ol ol ol,
+body ul ul ul ol ol ol ul ol,
+body ul ul ul ol ol ul ol ol,
+body ul ul ul ol ul ol ol ol,
+body ul ul ul ol ol ul ul ol,
+body ul ul ul ol ul ol ul ol,
+body ul ul ul ol ul ul ol ol,
+body ul ul ul ol ul ul ul ol,
+body ul ul ul ul ol ol ol ol,
+body ul ul ul ul ol ol ul ol,
+body ul ul ul ul ol ul ol ol,
+body ul ul ul ul ul ol ol ol,
+body ul ul ul ul ol ul ul ol,
+body ul ul ul ul ul ol ul ol,
+body ul ul ul ul ul ul ol ol,
+body ul ul ul ul ul ul ul ol
+{
+  list-style-type: lower-latin-lv3;
+}
 
 body ol>li::marker {
   font-weight: 600;
@@ -14459,7 +14645,7 @@ body.colorful-ordered-list ul ul ul ul ol ul ul ol li::marker,
 body.colorful-ordered-list ul ul ul ul ul ol ul ol li::marker,
 body.colorful-ordered-list ul ul ul ul ul ul ol ol li::marker,
 body.colorful-ordered-list ul ul ul ul ul ul ul ol li::marker {
-  color: var(--list-colorful-marker-8);
+  color: var(--list-colorful-marker-1);
 }
 
 

@@ -72,16 +72,28 @@ Nested numbered lists
 1. Lorem ipsum dolor sit amet, consectetur 
 	1. adipiscing elit, 
 		1. sed do eiusmod tempor incididunt 
-			1. ut labore et dolore magna aliqua. 
+			1. ut labore et dolore magna aliqua.
+			2. test
+				1. test
+				2. test
+			3. test
+				1. test
+					1. test
+						1. test
+							1. test
+						2. test			
+		1. test
+		2. Ut enim ad minim veniam, quis nostrud 
+	2. exercitation ullamco laboris nisi ut 
+2. aliquip ex ea commodo consequat
+	1. test
+		1. test
+			1. test
 				1. test
 					1. test
 						1. test
 							1. test
 								1. test
-									1. test
-		2. Ut enim ad minim veniam, quis nostrud 
-	2. exercitation ullamco laboris nisi ut 
-2. aliquip ex ea commodo consequat
 
 Mixed numbered lists
 
