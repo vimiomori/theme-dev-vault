@@ -31,9 +31,11 @@
             "id": "ba02b619c90945ee",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.3.4"
+                "file": "List Variations.md",
+                "mode": "preview",
+                "source": true
               }
             }
           }
@@ -187,12 +189,20 @@
   },
   "active": "ba02b619c90945ee",
   "lastOpenFiles": [
-    "List Variations.md",
-    "block quotes and stickies.md",
-    "README.md",
+    "Markdown Syntax.md",
     "Headings.md",
-    "Footnotes.md",
+    "Theme Colors.md",
+    "README.md",
     "Embeds copy.md",
+    "Embeds.md",
+    "block quotes and stickies.md",
+    "Tooltips and Notices.md",
+    "Tooltips and otic.md",
+    "2023-03-28.md",
+    "reareakdkd.md",
+    "2023-03-23.md",
+    "List Variations.md",
+    "Footnotes.md",
     "Embeds and super duper ooper long name.md",
     "Painting Dimensions.md",
     "How To/Use the developer tools.md",
@@ -201,20 +211,12 @@
     "How To/Show the rename file dialog.md",
     "How To/Guides for Theme Design.md",
     "Mobile.md",
-    "Markdown Syntax.md",
     "testtest.md",
     "Optional elements.md",
-    "2023-03-23.md",
-    "2023-03-28.md",
     "Untitled.md",
     "Plugins/Kanban 01.md",
     "blueDolphin.css",
-    "Tooltips and Notices.md",
-    "Tooltips and otic.md",
     "Untitled.canvas",
-    "Tables.md",
-    "reareakkdkd.md",
-    "reareakdkd.md",
     "theme.css",
     "Longer test",
     "tezt"

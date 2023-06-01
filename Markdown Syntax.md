@@ -101,6 +101,11 @@ test
 ```note-yellow
 test
 ```
+
+```note-cyan
+test
+```
+
 ## Blockquotes
 
 

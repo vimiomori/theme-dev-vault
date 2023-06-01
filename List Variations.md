@@ -1,6 +1,6 @@
 ---
 tags: meta
-cssClass: kanban wide-page
+cssClass: wide-page
 ---
 
 # List Variations
@@ -61,6 +61,14 @@ Start numbering with offset:
 
 Nested numbered lists
 
+- test
+	- test
+		- test
+			- test
+				- test
+					- test
+						- test
+
 1. Lorem ipsum dolor sit amet, consectetur 
 	1. adipiscing elit, 
 		1. sed do eiusmod tempor incididunt 
@@ -84,6 +92,10 @@ Mixed numbered lists
 		2. Ut enim ad minim veniam, quis nostrud 
 	- exercitation ullamco laboris nisi ut 
 2. aliquip ex ea commodo consequat.
+
+- test
+	1. test
+		- test
 
 ## Task lists
 There are lots of variations for these. We will try to list some common ones here. 
