@@ -744,7 +744,6 @@ body {
   --font-size-loading-diy-text: 3em;
   --font-size-loading-add: 1.5em;
   --table-header-size: inherit;
-  --nav-item-parent-padding: 2px 5px 2px 23px;
 
   /*radius*/
   --radius-xs: 3px;
@@ -1006,7 +1005,7 @@ body.theme-dark {
   --background-modifier-error-rgb: #ff8e8e8c;
   --text-accent: var(--color-accent);
   --text-accent-hover: var(--color-accent-2);
-  --text-highlight: var(--text-normal);
+  --text-highlight: var(--electric-blue-2);
   --background-modifier-box-shadow: rgba(172, 248, 242, 0.14);
   --background-modifier-active-hover: var(--cerulean);
   --indentation-guide-color: var(--indigo-blue);
@@ -1033,7 +1032,7 @@ body.theme-dark {
   --icon-color: var(--electric-blue-2);
   --icon-color-focused: var(--electric-blue-3);
 
-  --text-highlight-bg: var(--cerulean);
+  --text-highlight-bg: var(--background-blue);
   --mark-highlight-strong-em: var(--electric-blue-2);
   --text-search-highlight-bg: var(--cerulean);
 
@@ -1166,6 +1165,9 @@ body.theme-dark {
 
   --nav-item-color-active: var(--electric-blue-3);
   --nav-item-color-hover: var(--electric-blue-3);
+  --nav-item-parent-padding: 2px 5px 2px 23px;
+  --nav-item-background-hover: var(--dark-sky-blue);
+  --nav-item-font-weight-hover: bold;
 
   /*mermaid*/
   --mermaid-active-task-color: #187ef1;
@@ -2846,7 +2848,6 @@ body:not(.is-focused) .titlebar-text {
 
 .nav-folder.mod-root {
   position: relative;
-  height: 100%;
 }
 
 .nav-folder.mod-root>.nav-folder-title {
@@ -3772,7 +3773,7 @@ body.three-dolphins-hr .markdown-rendered hr {
 
 .nav-files-container {
   flex-grow: 1;
-  overflow-y: auto;
+  overflow-y: overlay;
   padding: 0 0 10px;
   overflow-x: hidden;
 }
@@ -4942,7 +4943,7 @@ body.rainbow-checkbox  ul ul ul ul ul ul ul ul li .task-list-item-checkbox {
 
 /*无序列表 大纲线*/
 body.colorful-indentation-lines ol::before {
-  border-color: rgba(var(--rainbow-rgb-7),0.3) !important;
+  border-color: rgba(var(--rainbow-rgb-8),0.3) !important;
 }
 body.colorful-indentation-lines ul ul::before {
   border-color: rgba(var(--rainbow-rgb-1),0.3) !important;
@@ -4974,7 +4975,7 @@ body.colorful-indentation-lines li ul ul ul ul ul ul ul ul ul::before {
 
 /*任务有序列表 大纲线*/
 body.colorful-indentation-lines ul::before {
-  border-color: rgba(var(--rainbow-rgb-7),0.3) !important;
+  border-color: rgba(var(--rainbow-rgb-8),0.3) !important;
 }
 body.colorful-indentation-lines ol ol::before {
   border-color: rgba(var(--rainbow-rgb-1),0.3) !important;
@@ -5711,8 +5712,6 @@ body.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight + .cm-em.cm-highli
 body:not(.is-grabbing) .nav-file-title:hover,
 body:not(.is-grabbing) .nav-folder-title:hover {
   border-radius: var(--radius-m);
-  margin: 2px 5px;
-  padding-left: 17px;
 }
 
 .item-list {
@@ -6307,7 +6306,7 @@ body.hide-vault-name .nav-folder.mod-root>.nav-folder-title {
 }
 
 .nav-folder:not(.is-collapsed) > .nav-folder-title > .nav-folder-title-content {
-  font-weight: 900;
+  font-weight: bold;
 }
 
 /*rename*/
@@ -6338,14 +6337,12 @@ body.hide-vault-name .nav-folder.mod-root>.nav-folder-title {
 /*---- nav arrows adjust location ----*/
 body .nav-folder-collapse-indicator {
   position: absolute;
-  left: 2px;
   top: 1px;
   transition: transform 20ms linear 0s;
 }
 
 body .nav-folder-collapse-indicator:hover {
   position: absolute;
-  left: 2px;
   top: 1px;
   transition: transform 20ms linear 0s;
 }
@@ -6372,10 +6369,17 @@ body:not(.is-grabbing) .nav-folder.is-collapsed .nav-folder-title-content:not(.i
   color: var(--bleu-de-france-1);
 }
 
+
 body .nav-folder.is-collapsed .nav-folder-collapse-indicator::after {
   transform: rotate(-90deg);
   /* opacity: 0.55; */
   color: var(--bleu-de-france-1);
+}
+
+body:not(.is-grabbing) .nav-folder-title:hover > .nav-folder-collapse-indicator::after,
+body:not(.is-grabbing) .nav-folder-title:hover > .nav-folder-title-content {
+  color: var(--nav-item-color-hover) !important;
+  font-weight: bold;
 }
 
 /*search icon 1*/
@@ -14089,7 +14093,7 @@ body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.Hype
 
 body.colorful-ordered-list ol ol li::marker,
 body.colorful-ordered-list ul ol li::marker {
-  color: var(--list-colorful-marker-1);
+  color: var(--list-colorful-marker-2);
 }
 body.colorful-ordered-list ol ol li::before,
 body.colorful-ordered-list ul ol li::before,
@@ -14102,7 +14106,7 @@ body.colorful-ordered-list ol ol ol li::marker,
 body.colorful-ordered-list ol ul ol li::marker,
 body.colorful-ordered-list ul ul ol li::marker,
 body.colorful-ordered-list ul ol ol li::marker {
-  color: var(--list-colorful-marker-2);
+  color: var(--list-colorful-marker-3);
 }
 body.colorful-ordered-list ol ol ol li::before,
 body.colorful-ordered-list ol ul ol li::before,
@@ -14121,7 +14125,7 @@ body.colorful-ordered-list ol ul ul ol li::marker,
 body.colorful-ordered-list ul ol ul ol li::marker,
 body.colorful-ordered-list ul ul ol ol li::marker,
 body.colorful-ordered-list ul ul ul ol li::marker {
-  color: var(--list-colorful-marker-3);
+  color: var(--list-colorful-marker-4);
 }
 body.colorful-ordered-list ol ol ol ol li::before,
 body.colorful-ordered-list ol ol ul ol li::before,
@@ -14152,7 +14156,7 @@ body.colorful-ordered-list ul ol ul ul ol li::marker,
 body.colorful-ordered-list ul ul ol ul ol li::marker,
 body.colorful-ordered-list ul ul ul ol ol li::marker,
 body.colorful-ordered-list ul ul ul ul ol li::marker {
-  color: var(--list-colorful-marker-4);
+  color: var(--list-colorful-marker-5);
 }
 body.colorful-ordered-list ol ol ol ol ol li::before,
 body.colorful-ordered-list ol ol ol ul ol li::before,
@@ -14207,7 +14211,7 @@ body.colorful-ordered-list ul ul ol ul ul ol li::marker,
 body.colorful-ordered-list ul ul ul ol ul ol li::marker,
 body.colorful-ordered-list ul ul ul ul ol ol li::marker,
 body.colorful-ordered-list ul ul ul ul ul ol li::marker {
-  color: var(--list-colorful-marker-5);
+  color: var(--list-colorful-marker-6);
 }
 
 body.colorful-ordered-list ol ol ol ol ol ol li::before,
@@ -14311,7 +14315,7 @@ body.colorful-ordered-list ul ul ul ol ul ul ol li::marker,
 body.colorful-ordered-list ul ul ul ul ol ul ol li::marker,
 body.colorful-ordered-list ul ul ul ul ul ol ol li::marker,
 body.colorful-ordered-list ul ul ul ul ul ul ol li::marker {
-  color: var(--list-colorful-marker-6);
+  color: var(--list-colorful-marker-7);
 }
 
 
@@ -14514,7 +14518,7 @@ body.colorful-ordered-list ul ul ul ul ul ul ol ol li::before,
 body.colorful-ordered-list ul ul ul ul ul ul ul ol li::before,
 body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-8.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
 body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-8.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
-  color: var(--list-colorful-marker-7);
+  color: var(--list-colorful-marker-1);
 }
 
 body.colorful-ordered-list ol ol ol ol ol ol ol ol li::marker,
@@ -14790,6 +14794,10 @@ select:focus,
 
 .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title {
   padding-left: var(--size-2-3);
+}
+
+.nav-folder.mod-root > .nav-folder-children {
+  padding-right: 0.8em;
 }
 
 .nav-folder .nav-folder-children[style="height: 0px;"]

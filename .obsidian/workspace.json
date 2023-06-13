@@ -34,7 +34,7 @@
               "type": "markdown",
               "state": {
                 "file": "List Variations.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": true
               }
             }
@@ -189,10 +189,12 @@
   },
   "active": "ba02b619c90945ee",
   "lastOpenFiles": [
+    "Page With Metadata.md",
     "Markdown Syntax.md",
+    "README.md",
+    "List Variations.md",
     "Headings.md",
     "Theme Colors.md",
-    "README.md",
     "Embeds copy.md",
     "Embeds.md",
     "block quotes and stickies.md",
@@ -201,7 +203,6 @@
     "2023-03-28.md",
     "reareakdkd.md",
     "2023-03-23.md",
-    "List Variations.md",
     "Footnotes.md",
     "Embeds and super duper ooper long name.md",
     "Painting Dimensions.md",
@@ -214,7 +215,6 @@
     "testtest.md",
     "Optional elements.md",
     "Untitled.md",
-    "Plugins/Kanban 01.md",
     "blueDolphin.css",
     "Untitled.canvas",
     "theme.css",

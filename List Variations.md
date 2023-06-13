@@ -94,6 +94,7 @@ Nested numbered lists
 						1. test
 							1. test
 								1. test
+									1. test
 
 Mixed numbered lists
 
