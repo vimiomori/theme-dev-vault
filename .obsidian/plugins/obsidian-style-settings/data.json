@@ -25,5 +25,7 @@
   "blue-dolphin-theme@@p-kanban-lane-borders": false,
   "blue-dolphin-theme@@p-kanban-dividers": false,
   "blue-dolphin-theme@@blockquote-style-change-options": "blockquote-style-dolphin",
-  "blue-dolphin-theme@@dolphin-metadata": true
+  "blue-dolphin-theme@@dolphin-metadata": true,
+  "buttons-styles@@button-background@@dark": "#C03E3E",
+  "buttons-styles@@button-background@@light": "#1646A7"
 }

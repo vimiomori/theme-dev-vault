@@ -38,9 +38,21 @@
                 "source": true
               }
             }
+          },
+          {
+            "id": "4e02e5833e09f523",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "buttons.md",
+                "mode": "preview",
+                "source": true
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -117,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "List Variations.md"
+                "file": "buttons.md"
               }
             }
           },
@@ -127,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "List Variations.md",
+                "file": "buttons.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -187,12 +199,13 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "ba02b619c90945ee",
+  "active": "4e02e5833e09f523",
   "lastOpenFiles": [
+    "List Variations.md",
+    "buttons.md",
     "Page With Metadata.md",
     "Markdown Syntax.md",
     "README.md",
-    "List Variations.md",
     "Headings.md",
     "Theme Colors.md",
     "Embeds copy.md",
@@ -214,7 +227,6 @@
     "Mobile.md",
     "testtest.md",
     "Optional elements.md",
-    "Untitled.md",
     "blueDolphin.css",
     "Untitled.canvas",
     "theme.css",
