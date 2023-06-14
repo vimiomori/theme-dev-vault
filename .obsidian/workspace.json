@@ -8,14 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7cc316586a0e395a",
-            "type": "leaf",
-            "state": {
-              "type": "memos_view",
-              "state": {}
-            }
-          },
-          {
             "id": "8b29c59625ccb360",
             "type": "leaf",
             "state": {
@@ -45,14 +37,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "buttons.md",
+                "file": "Tooltips and Notices.md",
                 "mode": "preview",
                 "source": true
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -129,7 +121,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "buttons.md"
+                "file": "Tooltips and Notices.md"
               }
             }
           },
@@ -139,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "buttons.md",
+                "file": "Tooltips and Notices.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -202,6 +194,7 @@
   "active": "4e02e5833e09f523",
   "lastOpenFiles": [
     "List Variations.md",
+    "Tooltips and Notices.md",
     "buttons.md",
     "Page With Metadata.md",
     "Markdown Syntax.md",
@@ -211,7 +204,6 @@
     "Embeds copy.md",
     "Embeds.md",
     "block quotes and stickies.md",
-    "Tooltips and Notices.md",
     "Tooltips and otic.md",
     "2023-03-28.md",
     "reareakdkd.md",
